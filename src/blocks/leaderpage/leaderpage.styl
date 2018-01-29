@@ -1,0 +1,48 @@
+.leaderpage
+	margin-top 60px
+	margin-bottom 60px
+	color text-color
+	.flex-container
+		flex-direction row-reverse
+		@media (min-width 320px) and (max-width 600px)
+			flex-direction column-reverse
+	&-img
+		margin-right 20px
+		width 250px
+		height 255px
+		border-radius 4px
+	.caption
+		line-height 20px
+		&-link
+			font-size 22px
+			color text-color
+			font-weight 600
+			margin-bottom 10px
+			display block
+			&:hover
+				text-decoration underline
+				color color-hover-link
+		&-text
+			margin-bottom 10px
+
+			.bold
+				font-weight 800
+	.leader-link
+		width 250px
+		margin 0 30px 30px 0
+	.oversees
+		margin-bottom 10px
+	.oversees-list
+		margin-bottom 60px
+		.oversees-item
+			padding-left 20px
+			margin-bottom 10px
+			position relative
+			&:before
+				position absolute
+				content ''
+				width 5px
+				height 1px
+				background: text-color
+				top 9px
+				left 10px	

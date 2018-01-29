@@ -1,0 +1,106 @@
+base-color-link = #dde1e6
+grey-section-color = #dde1e6
+text-color = #3b4256
+color-hover-card = #0e52e5
+color-hover-link = #0e52e5
+
+html, body
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+
+a
+  text-decoration none
+
+section, footer, .gos-bar .wrapper, .container
+  margin 0 auto
+  max-width 1170px
+  @media screen and (max-width 1200px)
+    max-width: 992px
+  .section-caption
+    color text-color
+    font-size 32px
+    font-weight bold
+    @media screen and (max-width 992px)
+      font-size 24px
+
+.flex-container
+    display flex
+    @media (min-width 980px) and (max-width 992px)
+      margin-left 20px    
+    justify-content flex-start
+    @media (min-width 940px) and (max-width 950px)
+      justify-content flex-start
+    flex-wrap nowrap
+    // padding 0 32px
+    padding 0 16px
+    @media screen and (max-width 500px)
+      padding 0 16px
+    @media (min-width 501px) and (max-width 992px)
+      padding: 0 8px
+
+.card-container
+    justify-content flex-start
+    flex-wrap wrap
+    margin-top 22px
+    padding-bottom 59px
+    @media screen and (max-width 1200px)
+      justify-content start
+    @media (min-width 320px) and (max-width 940px)
+      justify-content center
+    .card
+      width 352px
+      height 147px
+      margin 15px 0 25px 0
+      border-radius 7px
+      position relative
+      &:nth-child(3n+1)
+        margin-left 0
+      @media (min-width 940px) and (max-width 950px)
+        &:nth-child(2n+1)
+          margin-left 0!important
+      &:before
+        position absolute
+        width 10px
+        height 10px
+        border-bottom 1px solid #424858
+        border-left 1px solid #424858
+        transform rotate(225deg)
+        content ''
+        top 44px
+        right 30px
+      @media screen and (max-width 1200px)
+        width 435px
+        height 150px
+        margin 15px
+        &:nth-child(3n+1)
+          margin-left 15px
+      @media (min-width 1200px)
+        margin 15px 12px 25px
+       @media (max-width 640px) and (min-width 320px)
+        margin 10px 0
+        &:nth-child(3n+1)
+          margin-left 0
+
+      &:hover
+        &:before
+            border-bottom 1px solid #fff
+            border-left 1px solid #fff
+        & p 
+          color #fff
+      a
+        width 100%
+        height 100%
+        display inline-block
+        p
+          margin-top 37px
+          margin-left 30px
+          color #424858
+          width 258px
+          line-height 22px
+          @media (min-width 320px) and (max-width 370px)
+            width 177px
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

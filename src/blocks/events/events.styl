@@ -1,0 +1,73 @@
+.events
+  margin-bottom 127px
+  .section-caption
+    height 126px
+    line-height 126px
+    display inline-block
+    width 100%
+    border-bottom 1px solid #dde1e6
+    margin-bottom 40px
+  .events-card-container
+    flex-wrap wrap
+  .event-card
+    width 352px
+    padding-bottom 50px
+    @media screen and (max-width 1200px)
+      width 448px
+      &:nth-child(odd)
+        margin-right 32px
+    @media screen and (min-width 1200px)
+      &:nth-child(3n+2)
+        margin 0 32px
+    @media (min-width 993px) and (max-width 1200px)
+      &:nth-child(3n+2)
+        margin 0
+    @media (min-width 640) and (max-width 940px)
+      &:nth-child(odd)
+        margin-right 10px
+      width 46%
+
+    .date
+      display block
+      color #747e89
+      font-size 16px
+
+      margin-bottom 20px
+    .caption
+      display inline-block
+      color #414757
+      font-size 24px
+      font-weight 600
+      line-height 30px
+
+      &:hover
+        color #0e52e5
+  .more-events
+    margin 32px 32px 0 0
+    width 352px
+    float right
+    @media (width 992px)
+      float none
+      margin 10px 0 -30px 30px
+    @media (min-width 320px) and (max-width 640px)
+      width 273px 
+    a
+      position relative      
+      font-size 18px
+      color text-color
+      font-weight 600
+
+      display inline-block
+      width 100%
+      &:after
+        content ''
+        width 8px
+        height 14px
+        background-image url(../images/icons/arrow-icon.png)
+        position absolute
+        right 0
+        bottom 0
+      &:hover
+        color #0e52e5
+        &:after
+          background-image url(../images/icons/arrow-active-icon.png)

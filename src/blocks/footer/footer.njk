@@ -1,0 +1,44 @@
+{% set copyright = '&copy;2016-2017. &quot;Офи&shy;ци&shy;аль&shy;ный сайт Ми&shy;ни&shy;стер&shy;ства
+                        транс&shy;пор&shy;та, энер&shy;ге&shy;ти&shy;ки и свя&shy;зи
+                        Рес&shy;пуб&shy;ли&shy;ки Да&shy;ге&shy;стан&quot; яв&shy;ля&shy;ет&shy;ся
+                        се&shy;те&shy;вым из&shy;да&shy;ни&shy;ем. За&shy;ре&shy;ги&shy;стри&shy;ро&shy;ван
+                        в Фе&shy;де&shy;раль&shy;ной служ&shy;бе по над&shy;зо&shy;ру
+                        в сфе&shy;ре свя&shy;зи, ин&shy;фор&shy;ма&shy;ци&shy;он&shy;ных
+                        тех&shy;но&shy;ло&shy;гий и мас&shy;со&shy;вых ком&shy;му&shy;ни&shy;ка&shy;ций
+                        (Ро&shy;с&shy;ком&shy;над&shy;зор) 30 де&shy;каб&shy;ря
+                        2016 го&shy;да в ка&shy;че&shy;стве сред&shy;ства мас&shy;со&shy;вой
+                        ин&shy;фор&shy;ма&shy;ции (се&shy;те&shy;вое из&shy;да&shy;ние).
+                        Сви&shy;де&shy;тель&shy;ство о ре&shy;ги&shy;стра&shy;ции
+                        Эл № ФС77-68312' %}
+
+{% set adress = '367003, Республика Дагестан, г.Махачкала, ул. Ирчи Казака, 41' %}
+
+{% set telephone = '+7 (8722) 56-70-10' %}
+
+<footer>
+    <div class="container">
+        <div class="flex-container footer-container">
+            <a class="phone" href="tel:{{telephone}}">{{telephone}}</a>
+            <address>
+                <span>{{adress}}</span>
+            </address>
+            <div class="soc-links">
+                <div class="vkontakte icon">
+                    <a href="#" target="_blank"></a>
+                </div>
+                <div class="facebook icon">
+                    <a href="#" target="_blank"></a>
+                </div>
+                <div class="twiter icon">
+                    <a href="#" target="_blank"></a>
+                </div>
+                <div class="livejournal icon">
+                    <a href="#" target="_blank"></a>
+                </div>
+                <div class="copyright">
+                    <span>{{copyright}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

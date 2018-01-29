@@ -1,0 +1,14 @@
+{% extends 'base/base.njk' %}
+
+{% set title = 'Контакты' %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block header %}
+	{% include "../blocks/header/header.njk" %}
+{% endblock %}
+
+{% block content %}
+	{% include 'contacts/contacts.njk' %}
+	{% include 'sitemap/sitemap.njk' %}
+{% endblock %}

@@ -1,0 +1,92 @@
+.activities
+  // height 782px
+  .section-caption
+    height 126px
+    line-height 126px
+    display inline-block
+    width 100%
+    border-bottom 1px solid #dde1e6
+    margin-bottom 40px
+  .activities-card-container
+    flex-wrap wrap
+    margin-bottom 44px
+    @media (min-width 320px) and (max-width 942px)
+      justify-content center
+    .activities-card
+      position relative
+      width 352px
+      height 213px
+      margin 0 0 32px 0
+      overflow hidden
+      border-radius 7px
+      background-color #f4f7fb
+      @media screen and (min-width 1201px)
+        &:nth-child(3n+2)
+          margin 0 32px
+      @media screen and (max-width 1200px)
+        width 448px
+        height 213px
+        &:nth-child(odd)
+          margin-right 32px
+          @media (min-width 930px) and (max-width 990px)
+            margin-right 5px
+          @media (min-width 320px) and (max-width 910px)
+            margin-right 0px
+      a
+        img
+          margin 0 auto
+          display block
+        &:after
+          content ''
+          background-color #000
+          height 100%
+          left 0
+          opacity 0.5
+          position absolute
+          top 0
+          transition opacity 0.5s
+          width 100%
+        &:hover
+          &:after
+            opacity .7
+        &:hover > .description
+          top 70px
+          font-size 16px      
+      .description
+        display inline-block
+        position absolute
+        top 40px
+        left 30px
+        transition top 0.5s
+        width 272px
+        color #ffffff
+        font-size 20px
+        font-weight 600
+        @media (min-width 320px) and (max-width 640px)
+          left 15px
+  
+        z-index 1
+  .show-all-activities
+    justify-content center
+    // margin-bottom 40px
+    height 29px
+    a
+      width 150px
+      color text-color
+      font-size 18px
+      font-weight 600
+
+      position relative
+      &:after
+        content ''
+        width 8px
+        height 14px
+        background-image url(../images/icons/arrow-icon.png)
+        position absolute
+        right 0
+        bottom 11px
+        transform rotate(90deg)
+      &:hover
+        color #0e52e5
+        &:after
+          background-image url(../images/icons/arrow-active-icon.png)

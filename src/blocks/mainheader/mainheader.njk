@@ -1,0 +1,98 @@
+{% set catalog = 'Каталог информационных реусурсов Республики Дагестан' %}
+
+{% set logoalt = 'Министерство транспорта, энергетики и связи Республика Дагестан' %}
+
+{% set logosrc = './images/icons/logo-img.png' %}
+
+{% set logolink = '/' %}
+
+{% set blind = 'Версия для слабовидящих' %}
+
+{% set search = 'Поиск' %}
+
+{% set language = 'Русский' %}
+
+{% set list = [
+    {
+        'name': 'О министерстве',
+        'link': 'about.html'
+    },
+    {
+        'name': 'Пресс-центр',
+        'link': '/'
+    },
+    {
+        'name': 'Деятельность',
+        'link': 'activities.html'
+    },
+    {
+        'name': 'Документы',
+        'link': '/'
+    },
+    {
+        'name': 'Обращения граждан',
+        'link': '/'
+    },
+    {
+        'name': 'Контакты',
+        'link': '/'
+    },
+    {
+        'name': '•••',
+        'link': '/',
+        'class': 'dots sh-btn'
+    },
+    {
+        'link': '/',
+        'class': 'cross sh-btn'
+
+    }
+]%}
+
+<section class="gos-bar sh-block sh-hidden">
+    <div class=" wrapper">
+        <a class="catalog sh-btn" href="#">
+            <span>{{catalog}}</span>
+            <span class="logo-cross"></span>
+        </a>
+        <div class="left">
+            <a class="blind-version" href="#">
+                <span>{{blind}}</span>
+            </a>
+            <form action="get" class="search-field sh-block sh-hidden">
+                <input type="text" placeholder="Введите ваш запрос">
+                <button type="submit">Найти</button>
+                <a class="search sh-btn" href="#">
+                    <span>{{search}}</span>
+                </a>
+            </form>
+            <a class="language" href="#">
+                <span>{{language}}</span>
+            </a>
+        </div>
+    </div>
+{% include 'views/gosdropdown.njk' %}
+</section>
+<section class="top-menu sh-block sh-hidden">
+    <div class="container">
+        <a class="logo" href="{{logolink}}">
+            <img src="{{logosrc}}" alt="{{logoalt}}" title="{{logoalt}}">
+        </a>
+        <nav class="top-main-menu">
+            <ul class="main-menu">
+                {% for item in list %}
+                <li class="">
+                    <a href="{{item.link}}" class="catalog {% if item.class %}{{item.class}}{% endif %}">
+                        {{item.name}}
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </nav>
+        <div class="top-main-menu-burger sh-btn">
+            <span class="burger-line"></span>
+            <span class="burger-close"></span>
+        </div>
+    </div>
+    {% include 'views/topmenudropdown.njk' %}
+</section>

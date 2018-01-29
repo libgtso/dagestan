@@ -1,0 +1,15 @@
+{% extends 'base/base.njk' %}
+
+{% block title %}Главная{% endblock %}
+
+{% block content %}
+	{% include 'introduction/introduction.njk' %}
+	{% include 'newsblock/newsblock.njk' %}
+	{% include 'for_citizens/for_citizens.njk' %}
+	{% include 'activities/activities.njk' %}
+	{% include 'events/events.njk' %}
+	{% include 'sub_organizations/sub_organizations.njk' %}
+	{% include 'gallery/gallery.njk' %}
+	{% include 'resources/resources.njk' %}
+	{% include 'sitemap/sitemap.njk' %}
+{% endblock %}

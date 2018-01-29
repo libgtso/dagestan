@@ -1,0 +1,62 @@
+{% set header = 'Деятельность' %}
+
+{% set showall = 'Показать все' %}
+
+{% set cards = [
+	{
+		'link': '/',
+		'alt': 'Разработка и выполнение планов мероприятий',
+		'img': './images/img/activities-item1.png',
+		'description': 'Разработка и выполнение планов мероприятий'
+	},
+	{
+		'link': '/',
+		'alt': 'Направленных на финансирование расходов в установленных сферах деятельности',
+		'img': './images/img/activities-item2.png',
+		'description': 'Направленных на финансирование расходов в установленных сферах деятельности'
+	},
+	{
+		'link': '/',
+		'alt': 'Обеспечение размещения заказов',
+		'img': './images/img/activities-item3.png',
+		'description': 'Обеспечение размещения заказов'
+	},
+	{
+		'link': '/',
+		'alt': 'Разработка и выполнение планов мероприятий',
+		'img': './images/img/activities-item4.png',
+		'description': 'Разработка и выполнение планов мероприятий'
+	},
+	{
+		'link': '/',
+		'alt': 'Эффективное использование средств',
+		'img': './images/img/activities-item5.png',
+		'description': 'Эффективное использование средств'
+	},
+	{
+		'link': '/',
+		'alt': 'Обеспечение размещения заказов',
+		'img': './images/img/activities-item6.png',
+		'description': 'Обеспечение размещения заказов'
+	}
+]%}
+
+<section class="activities">
+    <div class="flex-container">
+        <h2 class="section-caption">{{header}}</h2>
+    </div>
+    <div class="flex-container activities-card-container">
+        {% for item in cards %}
+	        <div class="activities-card">
+	            <a href="{{item.link}}">
+	                <img src="{{item.img}}" alt="{{item.alt}}">
+	                <span class="description">{{item.description}}
+	                </span>
+	            </a>
+	        </div>
+        {% endfor %}
+    </div>
+    <div class="flex-container show-all-activities">
+        <a href="#">{{showall}}</a>
+    </div>
+</section>

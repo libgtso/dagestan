@@ -1,0 +1,40 @@
+{% set gosdropdown = [
+    {
+        'name': 'Глава Республики Дагестан',
+        'link': '/'
+    },
+    {
+        'name': 'Народное собрание Республики Дагестан',
+        'link': '/'
+    },
+    {
+        'name': 'Правительство Республики Дагестан',
+        'link': '/'
+    },
+    {
+        'name': 'Общественный надзор',
+        'link': '/'
+    },
+    {
+        'name': 'Открытые данные',
+        'link': '/'
+    },
+    {
+        'name': 'Электронные услуги',
+        'link': '/'
+    }
+]%}
+
+<div class="gos-bar-dropdown">
+    <div class="wrapper">
+        <ul class="dropdown-list">
+            {% for item in gosdropdown %}
+            <li class="dropdown-list__item">
+                <a href="{{item.link}}">
+                    <p>{{item.name}}</p>
+                </a>    
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>

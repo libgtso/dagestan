@@ -1,0 +1,45 @@
+{% set header1 = 'О министерстве' %}
+
+{% set list = [
+    {
+        'link':'/',
+        'name':'Общая информация'
+    },
+    {
+        'link':'/',
+        'name':'Полномочия и функции'
+    },
+    {
+        'link':'/',
+        'name':'Руководство'
+    },
+    {
+        'link':'/',
+        'name':'Структура'
+    },
+    {
+        'link':'/',
+        'name':'Подведомственные организации'
+    },
+    {
+        'link':'/',
+        'name':'Координационные и совещательные органы'
+    },
+    {
+        'link':'/',
+        'name':'Государственная служба'
+    },
+    {
+        'link':'/',
+        'name':'Противодействие коррупции'
+    }
+]%}
+
+<section class="about">
+    <div class="container">
+        <div class="flex-container">
+            <h1 class="section-caption">{{header1}}</h2>
+        </div>
+        {% include 'views/cards.njk' %}
+    </div>
+</section>

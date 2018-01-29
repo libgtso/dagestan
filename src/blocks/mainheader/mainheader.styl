@@ -1,0 +1,522 @@
+.gos-bar
+  max-width none
+  width 100%
+  height 100%
+  background-color text-color
+  position relative
+
+  .gos-container
+    justify-content: space-between
+  .wrapper
+    height 64px
+    display flex
+    flex-wrap nowrap
+    justify-content space-between
+    padding 0 32px
+    max-width: 1120px;
+    @media screen and (max-width 1200px)
+      max-width: 928px
+    @media screen and (max-width 500px)
+      padding 0 16px
+    a
+      font-size 14px
+      white-space nowrap 
+      height 16px
+      position relative
+      color #dde1e6
+      padding-left 32px
+      display inline-block
+      margin auto 0
+      &:before
+        content ''
+        width 16px
+        height 16px
+        position absolute
+        top 0
+        left 0
+    .catalog
+      margin-right 15px
+      @media screen and (max-width: 830px)
+        width: 0
+        overflow: hidden
+      &:before
+        background-image url('../images/icons/tile.png')  
+  .left
+    display flex
+    justify-content space-around
+    width 490px
+    position relative
+    @media screen and (max-width: 500px)
+      justify-content: flex-end 
+    @media screen and (max-width: 1200px)
+      width: 460px
+    .blind-version
+      padding-left 42px
+      &:before
+        width 26px
+        background-image url('../images/icons/glass.png')
+      @media screen and (max-width: 500px)
+        width: 0
+        overflow: hidden
+    .search
+      z-index 998      
+      &:before
+        background-image url('../images/icons/search-icon.png')
+      @media screen and (max-width: 500px)
+        width: 0
+        overflow: hidden
+        z-index 999
+    .language
+      &:before
+        width 20px
+        height 19px
+        background-image url('../images/icons/language-icon.png')
+        top -1px
+        left 0px
+      @media screen and (max-width: 500px)
+        padding: 0
+        &:before
+          content: none
+
+.gos-bar-dropdown
+  display none
+  padding 36px 0 79px
+  position absolute
+  z-index 22
+  background text-color
+  width 100%
+  @media (min-width 320px) and (max-width 992px)
+    padding 36px 0 50px
+  .wrapper
+    height 100%
+    max-width 1185px
+    @media screen and (max-width 1200px)
+      max-width: 928px
+    @media (min-width 320px) and (max-width 992px)
+      padding 0
+    a
+      white-space normal
+      @media screen and (max-width 1200px)
+        padding-left 20px
+
+.dropdown-list
+  display flex
+  justify-content flex-start
+  flex-wrap wrap
+  @media screen and (max-width 992px)
+    justify-content flex-start
+
+  &__item
+    margin-right 10px
+    margin-bottom 27px
+    display block
+    @media screen and (max-width 1300px)
+      margin-right 0
+    a
+      p
+        width 247px
+        display block
+        font-weight 600
+        font-size 16px
+        line-height 19px
+        @media screen and (max-width 1200px)
+          width 210px
+         @media (min-width 333px) and (max-width 980px)
+          width 256px
+        @media (min-width 320px) and (max-width 332px)
+          width 100%
+// ГОСБАР end
+
+// МЕНЮ
+.top-menu
+  width 100%
+  max-width none
+  border-bottom 1px solid base-color-link 
+  position relative
+  .container
+    height 128px
+    display flex
+    justify-content space-between
+    padding: 0 32px
+    max-width:1120px
+    flex-wrap wrap
+    @media screen and (max-width 1200px)
+      max-width: 928px
+    @media screen and (max-width 500px)
+      padding 0 16px
+    @media (min-width 320px) and (max-width 817px)
+      height 80px
+    .logo
+      display inline-block
+      margin: auto 20px auto 0
+      .logo-caption
+        width 250px
+
+    .top-main-menu
+      margin auto 0
+      @media (min-width 832px) and (max-width 884px)
+        margin 0 0 30px 0!important 
+      ul.main-menu
+        list-style none
+        margin 0
+        padding-left 0
+        float right
+        display flex
+        justify-content space-between
+          
+        li
+          display inline-block
+          margin-right 20px
+          &:first-child > a
+              margin-left 0px
+          @media (min-width 832px) and (max-width 992px)
+            margin-right 0
+          @media screen and (max-width 832px)
+            display none
+          
+          a
+            display inline-block
+            padding 10px 0
+            color #414757
+            font-family 'Segoe UI'
+            font-size 16px
+            font-weight 600
+            margin 0 0 0 16px
+            &:hover
+              color #0e52e5
+          @media (max-width 1200px) and (min-width 992px)
+            margin-right 10px
+
+  &__dropdown
+    padding 40px 0
+    position absolute
+    top: 128px;
+    width 100%
+    background: #fff;
+    border-bottom 1px solid #3b4256
+    box-shadow 0 20px 20px -15px #c8cbce
+    display none
+    z-index 10
+    @media (min-width 320px) and (max-width 817px)
+      padding 30px 0
+      top 80px
+    .container
+      display flex
+      height 100%
+      flex-wrap wrap
+      justify-content start
+      @media (min-width 320px) and (max-width 817px)
+        justify-content end
+    @media (min-width 500px) and (max-width 816px)
+      width 300px
+      right 0
+
+  &__item
+    font-size 14px
+    width 235px
+    line-height 17px
+    margin-bottom 18px
+    margin-left 40px
+    &:last-child
+      margin-bottom 40px
+    & a
+      color text-color
+      &:hover
+        color color-hover-link
+    @media (max-width 1200px) and (min-width 992px)
+      width 208px
+      margin-left 23px
+    @media (max-width 880px) and (min-width 817px)
+      width 210px
+    @media (min-width 320px) and (max-width 817px)
+      display none
+  &__item:first-child
+    font-size 21px
+    font-weight 600
+    margin-bottom 28px
+    @media (min-width 320px) and (max-width 817px)
+      display block
+      font-size 16px
+
+  .expanded
+    @media screen and (max-width 1200px)
+      height auto
+      flex-direction row
+      .logo
+        margin 60px 0 30px 0
+      .top-main-menu
+        margin 0 0 30px 64px
+        li
+          margin-right: 12px
+    .logo
+      margin-left -66px
+      @media screen and (max-width 1050px)
+        margin-left 0
+
+.gos-bar.sh-block > .gos-bar-dropdown
+  display block
+
+.gos-bar.sh-block.sh-hidden > .gos-bar-dropdown
+  display none
+
+.gos-bar.sh-block.sh-hidden > .wrapper > .sh-btn:before
+  display block
+
+.gos-bar.sh-block > .wrapper > .sh-btn:before
+  display none
+
+.gos-bar.sh-block .catalog .logo-cross
+  display block
+.gos-bar.sh-block.sh-hidden .catalog .logo-cross
+  display none
+
+.top-menu.sh-block.sh-hidden > .top-menu__dropdown
+  display none
+
+.top-menu.sh-block > .top-menu__dropdown
+  display block
+
+.top-menu div.container.expanded .top-main-menu ul.main-menu li
+  margin-right 0
+
+.top-menu.sh-block > .top-menu-dropdown
+  display none
+
+.top-menu.sh-block.sh-hidden .container .top-main-menu ul.main-menu li .dots
+  display block
+
+.dots
+  @media (min-width 830px) and (max-width 991px)
+    margin-left 10px
+
+.top-menu.sh-block .container .top-main-menu ul.main-menu li .dots
+  display none
+  margin 0
+
+.top-menu.sh-block.sh-hidden .container .top-main-menu ul.main-menu li a.cross
+  display none
+
+.top-menu.sh-block.sh-hidden .container .top-main-menu-burger .burger-line
+  display block
+
+.top-menu.sh-block .container .top-main-menu-burger .burger-line
+  display none
+
+.top-menu.sh-block .container .top-main-menu-burger .burger-close
+  display block
+
+.top-menu.sh-block.sh-hidden .container .top-main-menu-burger .burger-close
+  display none
+
+.top-menu.expanded.sh-block .container .top-main-menu-burger .burger-close
+  top 12px
+
+.top-menu.expanded .top-menu__dropdown
+  @media screen and (max-width 1200px)
+    top 170px
+    margin-top 40px
+
+.top-main-menu-burger
+  position absolute
+  top 32px
+  right 32px
+  height 20px
+  @media (min-width 818px)
+    display none
+  @media (min-width 320px) and (max-width 832px)
+    display block
+
+  .burger-line
+    width 16px
+    height 2px
+    display block
+    background #3b4256
+    &:before
+      content ''
+      width 16px
+      height 2px
+      background #3b4256
+      position absolute
+      top 7px
+    &:after
+      content ''
+      width 16px
+      height 2px
+      background #3b4256
+      position absolute
+      top 14px
+  .burger-close
+    position absolute
+    width 16px
+    height 16px
+    right 0
+    top 10px
+    &:before
+      content ''
+      position absolute
+      width 16px
+      height 2px
+      background #3b4256
+      transform rotate(45deg)
+     &:after
+      content ''
+      position absolute
+      width 16px
+      height 2px
+      background #3b4256
+      transform rotate(-45deg)      
+
+
+.top-menu.sh-block .top-main-menu ul.main-menu li a.cross
+  display block
+  position relative
+  width 20px
+  height 16px
+  margin-left 0
+
+.top-menu.sh-block .top-main-menu ul.main-menu li a.cross:before
+  position absolute
+  content ''
+  width 16px
+  height 2px
+  background #3b4256
+  top 17px
+  right 10px
+  transform rotate(45deg)
+  @media(min-width 1210px)
+    right 20px
+.top-menu.sh-block .top-main-menu ul.main-menu li a.cross:after
+  position absolute
+  content ''
+  width 16px
+  height 2px
+  background #3b4256
+  top 17px
+  right 10px
+  transform rotate(-45deg)
+  @media(min-width 1210px)
+    right 20px
+
+.top-menu.expanded.sh-block.sh-hidden .container.expanded .top-main-menu-burger
+  @media (min-width 320px) and (max-width 817px)
+    top 40px
+    right 25px
+.top-menu.expanded.sh-block .top-menu__dropdown
+  @media (min-width 320px) and (max-width 817px)
+    top 65px
+.top-menu.expanded.sh-block .container.expanded a.logo
+  @media (min-width 320px) and (max-width 817px)
+    margin 40px 0 10px
+.top-menu.expanded.sh-block .container.expanded a.logo .logo-caption
+  @media (min-width 320px) and (max-width 500px)
+    font-size 14px
+    width 210px
+
+.top-menu.expanded.sh-block.sh-hidden .container .top-main-menu .main-menu li .sh-btn.dots
+  display block
+  margin-left 20px
+.top-menu.expanded.sh-block .container .top-main-menu .main-menu li .sh-btn.dots
+  display none
+  margin 0
+.top-menu.expanded.sh-block .container .top-main-menu .main-menu li a.cross:after,
+.top-menu.expanded.sh-block .container .top-main-menu .main-menu li a.cross:before
+  right 5px
+
+.top-menu.expanded.sh-block .container .top-main-menu .main-menu li a.cross
+  margin-left 20px
+.logo-cross
+  position: absolute;
+  left: 0;
+  top 0
+  width: 20px;
+  height: 20px;
+  display none
+  &:before
+    position absolute
+    width 16px
+    height 2px
+    background #fff
+    content ''
+    transform rotate(45deg)
+    top 7px
+  &:after
+    position absolute
+    width 16px
+    height 2px
+    background #fff
+    content ''
+    transform rotate(-45deg)
+    top 7px
+
+.search-field
+    display flex
+    position relative
+    input
+      width 0
+      background #3b4256
+      border none
+      color base-color-link
+    button
+      display none
+
+.search-field.sh-block input
+  width 300px
+  margin-left -300px
+  transition 0.5s
+  z-index 999
+  @media (min-width 320px) and (max-width 500px)
+    width 230px
+    margin-right -90px
+    margin-left -100px
+  @media (min-width 950px) and (max-width 970px)
+    width 260px
+    margin-left -260px
+  @media (min-width 830px) and (max-width 970px)
+    width 242px
+    margin-left -242px
+  @media (min-width 501px) and (max-width 580px)
+    width 220px
+    margin-left -220px
+  @media (min-width 400px) and (max-width 500px)
+    width 280px
+    margin-left -280px
+
+.search-field.sh-block.sh-hidden input
+  width 0
+  margin-left 0
+
+.search-field.sh-block.sh-hidden .search.sh-btn
+  left 0
+  &:before
+    background-image url('../images/icons/search-icon.png')
+
+.search-field.sh-block .search.sh-btn
+  &:before
+    background url('../images/icons/cross-white.png') 50% 100% no-repeat
+  @media (min-width 320px) and (max-width 500px)
+    left 88%
+.search-field.sh-block.sh-hidden
+  button
+    display none
+
+.search-field.sh-block
+  button
+    display flex
+    padding 0
+    border none
+    background text-color
+    position absolute
+    top 0
+    right -10px
+    bottom 0
+    z-index 999
+    border: 1px solid #fff;
+    height: 30px;
+    margin-top: 18px;
+    padding: 10px 10px 14px;
+    line-height: 1px;
+    border-radius: 5px;
+    color base-color-link
+    cursor pointer
+    @media (min-width 320px) and (max-width 500px)
+      display none

@@ -1,0 +1,40 @@
+{% set header = 'Мероприятия' %}
+
+{% set cards = [
+	{
+		'name': 'Превью наименования мероприятия. Расчитано на три строчки. Поместилось.',
+		'link': '/',
+		'date': 'Сегодня'
+	},
+	{
+		'name': 'Превью наименования мероприятия.',
+		'link': '/',
+		'date': 'Завтра'
+	},
+	{
+		'name': 'Превью наименования мероприятия. Не поместилось целиком даже в три ...',
+		'link': '/',
+		'date': '29 декабря'
+	}
+]%}
+
+{% set allevents = 'Все мероприятия' %}
+
+{% set alleventslink = '/' %}
+
+<section class="events">
+    <div class="flex-container">
+        <h2 class="section-caption">{{header}}</h2>
+    </div>
+    <div class="flex-container events-card-container">
+    	{% for item in cards %}
+	        <div class="event-card">
+	            <span class="date">{{item.date}}</span>
+	            <a href="{{item.link}}" class="caption">{{item.name}}</a>
+	        </div>
+        {% endfor %}
+    </div>
+    <div class="more-events">
+        <a href="{{alleventslink}}">{{allevents}}</a>
+    </div>
+</section>

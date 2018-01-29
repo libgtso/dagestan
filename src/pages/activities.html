@@ -1,0 +1,15 @@
+{% extends 'base/base.njk' %}
+
+{% set title = 'Деятельность' %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block header %}
+	{% include "../blocks/header/header.njk" %}
+{% endblock %}
+
+{% block content %}
+	{% include 'ouractivities/ouractivities.njk' %}
+	{% include 'information/information.njk' %}
+	{% include 'sitemap/sitemap.njk' %}
+{% endblock %}

@@ -1,0 +1,81 @@
+{% set card = [
+	{
+		"info": [
+			{
+				'class': 'caption',
+				'desc': 'Министерство транспорта, энергетики и связи Республики Дагестан'
+			},
+			{
+				'class': 'adress',
+				'desc': '367030, Республика Дагестан, г.Махачкала, ул. Ирчи Казака, 41'
+			},
+			{
+				'class': 'phone',
+				'desc': 'Телефон: +7 (8722) 56-70-10'
+			},
+			{
+				'class': 'fax',
+				'desc': '+7 (8722) 94-00-37',
+				'field': 'Факс:'
+			},
+			{
+				'class': 'mail',
+				'desc': 'mtes@e-dag.ru',
+				'field':'E-mail:'
+			}
+		]
+	},
+	{
+		"info": [
+			{
+				'class': 'caption',
+				'desc': 'Управление транспорта'
+			},
+			{
+				'class': 'adress',
+				'desc': 'г.Махачкала, ул. Ирчи Казака, 41'
+			},
+			{
+				'class': 'phone',
+				'desc': '+7 (8722) 94-00-03, 94-00-05, 94-00-09',
+				'field': 'Телефон:'
+			},
+			{
+				'class': 'fax',
+				'desc': '',
+				'field': 'Факс:'
+			},
+			{
+				'class': 'mail',
+				'desc': '',
+				'field':'E-mail:'
+			},
+			{
+				'class': 'description',
+				'desc': 'ачальник управления - Худжаев Якуб Магомедович',
+				'field': 'Начальник управления:'
+			}
+		]
+	}
+]
+%}
+
+<section class="contacts">
+	<div class="flex-container">
+		{% for item in card %}
+			<div class="contacts-card">
+				{% for item in item.info %}
+					<p class="{{item.class}}{% if item.description %}{{item.description}}{% endif %}">{% if item.field %}{{item.field}}{% endif %} {{item.desc}}</p>
+				{% endfor %}
+			</div>
+		{% endfor %}
+	</div>
+</section>
+<section class="contacts-map">
+	<div class="flex-container">
+		<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A70ccf3388ef2059f615391f2c079e689d7c0f170ad1467ed0cfdb7f1b7b64317&amp;width=1170px&amp;height=500px&amp;lang=ru_RU&amp;scroll=false"></script>
+	</div>
+	<div class="flex-container">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2455.572595500968!2d47.520312733281564!3d42.9533183010066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x404ea0d8c53359c1%3A0xc5a83650a6f67ecb!2z0JTQtdC_0LDRgNGC0LDQvNC10L3RgiDQotGA0LDQvdGB0L_QvtGA0YLQsCDQoNC10YHQv9GD0LHQu9C40LrQuCDQlNCw0LPQtdGB0YLQsNC9!5e0!3m2!1sru!2sru!4v1516613029976" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+	</div>
+</section>

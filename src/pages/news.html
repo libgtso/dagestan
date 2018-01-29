@@ -1,0 +1,20 @@
+{% extends 'base/base.njk' %}
+
+{% set title = 'Новости' %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block header %}
+	{% include "../blocks/header/header.njk" %}
+{% endblock %}
+
+{% block content %}
+	<div class="newspage">
+		{% include 'newsblock/newsblock.njk' %}
+		<div class="show-more-news">
+        	<a href="">Показать еще</a>
+    	</div>
+	</div>
+	{% include 'information/information.njk' %}
+	{% include 'sitemap/sitemap.njk' %}
+{% endblock %}

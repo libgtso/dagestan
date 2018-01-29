@@ -1,0 +1,79 @@
+{% set header2 = 'Для граждан' %}
+
+{% set cards = [
+    {
+        'link': '/',
+        'caption': 'Зарегистрироваться в единой системе идентификации и аутентификации',
+        'description': 'Получить доступ к сервисам электронного правительства Российской Федерации'
+    },
+    {
+        'link': '/',
+        'caption': 'Проверка скорости интернета',
+        'description': 'Онлайн проверка скорости интернет-соединения. Узнай реальную скорость интернет-провайдера без регистрации и смс'
+    },
+    {
+        'link': '/',
+        'caption': 'Проверка скорости интернета',
+        'description': 'Онлайн проверка скорости интернет-соединения. Узнай реальную скорость интернет-провайдера без регистрации и смс'
+    }
+]%}
+
+{% set menu = [
+    {
+        'name': 'Читать все новости',
+        'link': '/'
+    },
+    {
+        'name': 'Общественные обсуждения',
+        'link': '/'
+    },
+    {
+        'name': 'Консультации с гражданами',
+        'link': '/'
+    },
+    {
+        'name': 'Общественные обсуждения',
+        'link': '/'
+    },
+    {
+        'name': 'Петиции',
+        'link': '/'
+    }
+]%}
+
+{% set feedback = 'Написать обращение' %}
+
+<section class="for-citizens">
+    <div class="container">
+        <div class="flex-container">
+            <h2 class="section-caption">{{header2}}</h2>
+        </div>
+        <div class="flex-container citizens-flex-container">
+            <div class="citizens-card-container">
+                {% for item in cards %}
+                    <div class="card-citizen">
+                        <a href="{{item.link}}">
+                            <div class="card-text-wrapper">
+                                <span class="caption">{{item.caption}}</span>
+                                <span class="description">{{item.description}}</span>
+                            </div>
+                            <div class="hexagon-img"></div>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="citizens-menu">
+                <div class="menu">
+                    <ul>
+                        {% for item in menu %}
+                            <li>
+                                <a href="{{item.link}}">{{item.name}}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <a href="#" class="feedback">{{feedback}}</a>
+            </div>
+        </div>
+    </div>
+</section>

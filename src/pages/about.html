@@ -1,0 +1,15 @@
+{% extends 'base/base.njk' %}
+
+{% set title = 'О минстерстве' %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block header %}
+	{% include "../blocks/header/header.njk" %}
+{% endblock %}
+
+{% block content %}
+	{% include 'about/about.njk' %}
+	{% include 'information/information.njk' %}
+	{% include 'sitemap/sitemap.njk' %}
+{% endblock %}

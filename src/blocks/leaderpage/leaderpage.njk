@@ -1,0 +1,75 @@
+{% set caption = [
+		{
+			'name': 'Умаханов Сайгидпаша Дарбишевич',
+			'link': 'leaderpage.html'
+		},
+		{
+			'position': 'Первый заместитель министра транспорта, энергетики и связи Республики Дагестан '
+		},
+		{
+			'field': 'Номера телефонов:',
+			'phone': '+7 (8722) 56-70-10'
+		},
+		{
+			'mail': 'mtes@e-dag.ru ',
+			'field': 'Почта:'
+		}
+	]
+%}
+
+{% set img = [
+	{
+		'src': './images/img/leader.jpg',
+		'alt': 'Умаханов Сайгидпаша Дарбишевич',
+		'link': '/'
+	}
+]%}
+
+{% set oversees = 'Курируемые подразделения министерства:' %}
+
+{% set list = [
+	{
+		'item': 'Управление развития электронного правительства и государственных услуг'
+	},
+	{
+		'item': 'Управление бухгалтерского учета, экономики, финансов, правового и административно-хозяйственного обеспечения'
+	}
+]%}
+
+<section class="leaderpage">
+	<div class="flex-container">
+		<div class="caption">
+			{% for item in caption %}
+				<p class="caption-text">
+					{% if item.name %}
+						<a class="caption-link" href="{{item.link}}">{{item.name}}</a>
+					{% endif %}
+					{% if item.position %}
+						{{item.position}}
+					{% endif %}
+					{% if item.phone %}
+						<span class="bold">{{item.field}}</span>
+						<span>{{item.phone}}</span>
+					{% endif %}
+					{% if item.mail %}
+						<span class="bold">{{item.field}}</span>
+						<span>{{item.mail}}</span>
+					{% endif %}
+				</p>
+			{% endfor %}
+			<p class="oversees">{{oversees}}</p>
+			<ul class="oversees-list">
+				{% for item in list %}
+				<li class="oversees-item">
+					{{item.item}}
+				</li>
+				{% endfor %}
+			</ul>
+		</div>
+		{% for item in img %}
+			<a class="leader-link" href="{{item.link}}">
+				<img class="leaderpage-img" src="{{item.src}}" alt="{{item.alt}}">
+			</a>
+		{% endfor %}
+	</div>
+</section>

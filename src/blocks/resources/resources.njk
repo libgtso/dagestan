@@ -1,0 +1,68 @@
+{% set header = 'Полезные ресурсы' %}
+
+{% set cardresources = [
+	{
+		'link': '/',
+		'label': 'Глава Республики Дагестан',
+		'linkname': 'thebestdomainname.ru'
+	},
+	{
+		'link': '/',
+		'label': 'Правительство Республики Дагестан',
+		'linkname': 'thebestdomainname.ru'
+	},
+	{
+		'link': '/',
+		'label': 'Портал «Общественный надзор» Республики Дагестан',
+		'linkname': 'thebestdomainname.ru'
+	},
+	{
+		'link': '/',
+		'label': 'Портал открытых данных Российской Федерации',
+		'linkname': 'thebestdomainname.ru'
+	},
+	{
+		'link': '/',
+		'label': 'Единый портал государственных услуг Российской ',
+		'linkname': 'thebestdomainname.ru'
+	},
+	{
+		'link': '/',
+		'label': 'Каталог информационных ресурсов Республики Дагестан',
+		'linkname': 'thebestdomainname.ru'
+	},
+	{
+		'link': '/',
+		'label': 'МРСК Северного Кавказа',
+		'linkname': 'thebestdomainname.ru'
+	},
+	{
+		'link': '/',
+		'label': 'АО «Дагестанская сетевая копания»',
+		'linkname': 'thebestdomainname.ru'
+	},
+	{
+		'link': '/',
+		'label': 'АО «Дагестанская сетевая копания»',
+		'linkname': 'thebestdomainname.ru'
+	}
+]%}
+
+<section class="resources">
+    <div class="container">
+        <div class="flex-container">
+            <h2 class="section-caption">{{header}}</h2>
+        </div>
+        <div class="flex-container resource-card-container">
+        	{% for item in cardresources %}
+	            <div class="resource-card">
+	                <a href="{{item.link}}">
+	                    <span class="label">{{item.label}}
+	                    </span>
+	                    <span class="link">{{item.linkname}}</span>
+	                </a>
+	            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

@@ -1,0 +1,29 @@
+{% set header2 = 'Информация' %}
+
+{% set list = [
+    {
+        'link': '/',
+        'name': 'Дагестанцы против терроризма'
+    },
+    {
+        'link': '/',
+        'name': 'Электронные услуги'
+    },
+    {
+        'link': '/',
+        'name': 'Социальная поддержка граждан, попавших в трудную жизненную ситуацию'
+    },
+    {
+        'link': '/',
+        'name': 'Реформа контрольной и надзорной деятельности'
+    }
+]%}
+
+<section class="information">
+    <div class="container">
+        <div class="flex-container">
+            <h2 class="section-caption">{{header2}}</h2>
+        </div>
+        {% include 'views/cards.njk' %}
+    </div>
+</section>

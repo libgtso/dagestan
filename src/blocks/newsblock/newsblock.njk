@@ -1,0 +1,108 @@
+{% set header1 = 'Новости' %}
+
+{% set newsmenu = [
+    {
+        'name': 'Новости',
+        'link': 'news.html',
+        'class': 'active'
+    },
+    {
+        'name': 'Новости республики',
+        'link': 'news.html'
+    },
+    {
+        'name': 'Объявления',
+        'link': 'news.html'
+    },
+    {
+        'name': 'Мероприятия',
+        'link': 'news.html'
+    }
+]%}
+
+{% set mainnewscaption = 'Электронные услуги – это просто!' %}
+
+{% set mainnewsdecription = 'Это краткий анонс новости или начало текста новости. Наш
+                        мир полон тайн, которые кажутся неразрешимыми. Загадка
+                        Розуэлла, тайна убийства Кеннеди, гигантские надписи
+                        ...' %}
+
+{% set date = 'Сегодня' %}
+
+{% set newsitem = [
+    {
+        'img': './images/img/news-item1.png',
+        'alt': 'Вопросы транспорта и энергетики обсудили на еженедельном
+        совещании в Минтрансэнергосвязи РД',
+        'caption': 'Вопросы транспорта и энергетики обсудили на еженедельном
+        совещании в Минтрансэнергосвязи РД',
+        'time': 'Сегодня',
+        'link': '/'
+    },
+    {
+        'img': './images/img/news-item6.png',
+        'alt': 'Вопросы транспорта и энергетики обсудили на еженедельном
+        совещании в Минтрансэнергосвязи РД',
+        'caption': 'Вопросы транспорта и энергетики обсудили на еженедельном
+        совещании в Минтрансэнергосвязи РД',
+        'time': 'Сегодня',
+        'link': '/'
+    },
+    {
+        'img': './images/img/news-item1.png',
+        'alt': 'Вопросы транспорта и энергетики обсудили на еженедельном
+        совещании в Минтрансэнергосвязи РД',
+        'caption': 'Вопросы транспорта и энергетики обсудили на еженедельном
+        совещании в Минтрансэнергосвязи РД',
+        'time': 'Сегодня',
+        'link': '/'
+    }
+]%}
+
+{% set readallnews = 'Читать все новости' %}
+
+{% set linkallnews = 'news.html' %}
+
+<section class="news">
+    <div class="flex-container">
+        <div class="news-menu">
+            <h1 class="section-caption">{{header1}}</h1>
+            <div class="news-menu-tabs">
+                <ul>
+                    {% for item in newsmenu %}
+                    <li>
+                        <a href="{{item.link}}" class="{% if item.class %}{{item.class}}{% endif %}">{{item.name}}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="flex-container">
+        <div class="new-blocks">
+            <div class="main-news">
+                <a href="#" class="caption">
+                    <img src="./images/img/main-news-img.png" alt="{{mainnewscaption}}" class="main-img">     
+                </a>
+            </div>
+            <div class="news-item main-news-description">
+                <a href="#" class="caption">{{mainnewscaption}}
+                    <span class="description">{{mainnewsdecription}}</span>
+                </a>
+                <span class="time">{{date}}</span>
+            </div>
+            {% for item in newsitem %}
+                <div class="news-item">
+                    <a href="{{item.link}}" class="caption">
+                        <img src="{{item.img}}" class="news-item-img" alt="{{item.alt}}">
+                        <p>{{item.caption}}</p>
+                    </a>
+                    <span class="time">{{item.time}}</span>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="more-news">
+        <a href="{{linkallnews}}">{{readallnews}}</a>
+    </div>
+</section>

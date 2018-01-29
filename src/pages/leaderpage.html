@@ -1,0 +1,14 @@
+{% extends 'base/base.njk' %}
+
+{% set title = 'Магомедов Магомед Шамилович ' %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block header %}
+	{% include "../blocks/header/header.njk" %}
+{% endblock %}
+
+{% block content %}
+	{% include 'leaderpage/leaderpage.njk' %}
+	{% include 'sitemap/sitemap.njk' %}
+{% endblock %}

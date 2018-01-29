@@ -1,0 +1,58 @@
+.sitemap
+  // height 1620px
+  background-color #3b4256
+  max-width none
+  .section-caption
+    height 126px
+    line-height 126px
+    display inline-block
+    width 100%
+    color #ffffff
+    border-bottom 1px solid #596176
+  .sitemap-container
+    flex-wrap wrap
+    .sitemap-section
+      position relative
+      margin-bottom 46px
+      margin-top 40px
+      @media screen and (max-width 1200px)
+        width 208px
+      @media screen and (max-width 743px)
+        width 177px
+      @media (min-width 320px) and (max-width 520px)
+        width 100%
+      width 256px
+      &:nth-child(4n+2)
+        margin-right 32px
+        margin-left 32px
+        @media screen and (max-width 743px)
+          margin-left 10px
+        @media screen and (max-width 940px)
+          margin-left 0
+          margin-right 10px
+
+      &:nth-child(4n+3)
+        margin-right 32px
+        @media screen and (max-width 940px)
+          margin-right 10px
+      &:nth-child(4n+1)
+        &:after
+          // content ""
+          position absolute
+          bottom -46px
+          width calc(400%+96px)
+          border-bottom 1px solid #596176
+      li
+        margin-bottom 18px        
+        &:first-child 
+          margin-bottom 30px
+          a
+            font-size 20px
+        a
+    
+          color #fff
+          font-size 14px
+          line-height 17px
+          font-weight 600
+          &:hover
+            color #bdc1ca
